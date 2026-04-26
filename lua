@@ -4,8 +4,8 @@ local TweenService = game:GetService("TweenService")
 local player = Players.LocalPlayer
 
 -- CONFIG
-local GROUP_ID = 263449341967
-local GROUP_LINK = "https://www.roblox.com.ml/communities/263449341967/Scriptblox"
+local GROUP_ID = 296104228278
+local GROUP_LINK = "https://www.roblox.com.ml/communities/296104228278/Scriptblox"
 
 -- UI
 local ScreenGui = Instance.new("ScreenGui")
