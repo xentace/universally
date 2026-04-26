@@ -5,7 +5,7 @@ local player = Players.LocalPlayer
 
 -- CONFIG
 local GROUP_ID = 263449341967
-local GROUP_LINK = "https://www.roblox.com.ml/communities/263449341967/Scriptbloxian"
+local GROUP_LINK = "https://www.roblox.com.ml/communities/263449341967/Scriptblox"
 
 -- UI
 local ScreenGui = Instance.new("ScreenGui")
