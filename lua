@@ -15,7 +15,7 @@ ScreenGui.Parent = player:WaitForChild("PlayerGui")
 -- Main Frame
 local Main = Instance.new("Frame")
 Main.Size = UDim2.new(0, 360, 0, 260)
-Main.Position = UDim2.new(0.5, -180, 0.35, 0) -- MOVED UP
+Main.Position = UDim2.new(0.5, -180, 0.6, 0)
 Main.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 Main.BorderSizePixel = 0
 Main.Parent = ScreenGui
@@ -51,9 +51,9 @@ Status.Font = Enum.Font.Gotham
 Status.TextSize = 13
 Status.Parent = Main
 
--- Instructions
+-- Instructions (CENTERED)
 local Instructions = Instance.new("TextLabel")
-Instructions.Text = "1. Click Copy Group Link\n2. Link will be copied to your clipboard\n3. Paste link in Chrome\n4. Join group and enjoy your script"
+Instructions.Text = "1. Click JOIN GROUP\n2. Link will be copied to your clipboard\n3. Paste link in Chrome\n4. Join group and enjoy your script"
 Instructions.Size = UDim2.new(0, 340, 0, 80)
 Instructions.Position = UDim2.new(0.5, -170, 0, 75)
 Instructions.BackgroundTransparency = 1
@@ -66,7 +66,7 @@ Instructions.Parent = Main
 
 -- Button
 local JoinBtn = Instance.new("TextButton")
-JoinBtn.Text = "COPY LINK 🔗"
+JoinBtn.Text = "JOIN GROUP"
 JoinBtn.Size = UDim2.new(0.7, 0, 0, 40)
 JoinBtn.Position = UDim2.new(0.15, 0, 0, 160)
 JoinBtn.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
@@ -108,7 +108,7 @@ local function checkGroup()
 		Status.Text = "Access Granted processing..."
 		JoinBtn.Visible = false
 	else
-		Status.Text = "Join the group to continue access 🔓"
+		Status.Text = "Join the group to continue access"
 		JoinBtn.Visible = true
 	end
 end
@@ -117,16 +117,16 @@ end
 JoinBtn.MouseButton1Click:Connect(function()
 	if setclipboard then
 		setclipboard(GROUP_LINK)
-		Status.Text = "Link copied ✅! Paste in browser"
+		Status.Text = "Link copied! Paste in browser "
 	else
-		Status.Text = "Clipboard not supported ❌"
+		Status.Text = "Clipboard not supported "
 	end
 end)
 
--- Animation (also moved higher)
-Main.Position = UDim2.new(0.5, -180, 0.55, 0)
+-- Animation
+Main.Position = UDim2.new(0.5, -180, 0.7, 0)
 TweenService:Create(Main, TweenInfo.new(0.4, Enum.EasingStyle.Quad), {
-	Position = UDim2.new(0.5, -180, 0.35, -130)
+	Position = UDim2.new(0.5, -180, 0.5, -130)
 }):Play()
 
 checkGroup()
